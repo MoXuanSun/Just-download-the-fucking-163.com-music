@@ -404,7 +404,7 @@ fuckingfuncs.downloadArtists = async function downloadArtists(ids,alstart,alend)
 
 fuckingfuncs.downloadDJs = async function downloadDJs(ids,start,end){
     for (let id of ids){
-        let res = WEAPI.radioDetail(id,start,end)
+        let res = await WEAPI.radioDetail(id,start,end)
         console.log("准备开始下载")
         console.log(res)
         console.log("电台信息\n==================\n"+ "电台id：" + res.programs[0].radio.id + "\n电台名：" + res.programs[0].radio.name + "\n电台介绍：" + res.programs[0].radio.desc)
